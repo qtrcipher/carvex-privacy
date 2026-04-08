@@ -10,26 +10,69 @@
         h2 { font-size: 18px; margin-top: 30px; }
         p, li { font-size: 15px; }
         a { color: #007AFF; }
+        table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+        th { background-color: #f5f5f5; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
     <p><strong>Carvex</strong> — GCC Car Marketplace</p>
-    <p><em>Effective date: March 26, 2026</em></p>
+    <p><em>Effective date: April 8, 2026</em></p>
 
     <h2>Overview</h2>
-    <p>Carvex is a free iOS app that aggregates car listings from public marketplaces across the GCC region. We respect your privacy and are committed to being transparent about the data practices of this app.</p>
+    <p>Carvex is an iOS app that aggregates car listings from public marketplaces across the GCC region. This policy explains what information the app handles and — just as importantly — what it does not handle.</p>
 
     <h2>Information We Do Not Collect</h2>
     <p>Carvex does not:</p>
     <ul>
         <li>Require user accounts or registration</li>
-        <li>Collect your name, email, phone number, or any personal information</li>
+        <li>Collect personal identifiers such as name, email address, or phone number</li>
         <li>Track your location</li>
-        <li>Access your contacts, camera, or other device features</li>
-        <li>Store any data on external servers</li>
-        <li>Use analytics or tracking tools</li>
+        <li>Access your contacts, camera, microphone, or photos</li>
+        <li>Use third-party analytics or behavioral tracking tools</li>
+        <li>Maintain any user database on our servers</li>
     </ul>
+    <p>Your favorites, saved searches, notes, recently viewed history, and premium entitlement cache are stored <strong>only on your device</strong> using iOS's standard local storage. If you uninstall the app, that data is removed.</p>
+
+    <h2>Data Fetched From Public Sources</h2>
+    <p>Carvex displays car listings from publicly accessible marketplace websites. Requests are made directly from your device (for free sources) or via a Carvex-hosted backend (for premium sources, see below). No user data is transmitted to these marketplaces — your device simply downloads their public listing data.</p>
+
+    <p><strong>Free-tier sources</strong> (fetched directly from your device):</p>
+    <ul>
+        <li>QatarSale (Qatar)</li>
+        <li>OpenSooq (all 6 GCC countries)</li>
+        <li>Q8Car (Kuwait)</li>
+        <li>4Sale (Kuwait)</li>
+    </ul>
+
+    <p><strong>Premium-tier sources</strong> (fetched via our Firebase backend):</p>
+    <ul>
+        <li>Dubizzle (UAE)</li>
+        <li>DubiCars (UAE)</li>
+    </ul>
+
+    <p>For premium sources, Carvex runs a server-side pipeline that fetches public listing data once per day, normalizes it, and publishes a single JSON file to Firebase Storage. Your device downloads that file when you are subscribed to Carvex Premium. The backend does not receive any information about you — it only publishes data.</p>
+
+    <h2>Carvex Premium Subscriptions</h2>
+    <p>Carvex Premium is an auto-renewable subscription available in two tiers:</p>
+    <ul>
+        <li><strong>Carvex Premium Monthly</strong> — $1.99 per month</li>
+        <li><strong>Carvex Premium Yearly</strong> — $9.99 per year</li>
+    </ul>
+    <p>Payment is processed by <strong>Apple's In-App Purchase system</strong>. Carvex does not receive or store your payment details, Apple ID, or any billing information. Subscription receipts are validated locally using Apple's StoreKit 2 on your device — no receipt data is sent to Carvex or any third party. You can cancel or manage your subscription at any time in your iOS Settings → Apple ID → Subscriptions.</p>
+
+    <h2>Firebase (Premium Users Only)</h2>
+    <p>When you are subscribed to Carvex Premium, your device downloads the daily premium listings file from <strong>Firebase Storage</strong>. Firebase is a Google service. Firebase logs the IP address of each download request and the approximate time (standard HTTP server logging). Carvex does not associate these logs with any user identity because Carvex does not maintain user identities.</p>
+
+    <p><strong>Firebase App Check:</strong> Requests for the premium listings file are protected by Firebase App Check using Apple's App Attest service. App Attest is an Apple framework that lets your device prove it is running an authentic, unmodified copy of Carvex. This verification happens inside Apple's Secure Enclave on your device; no personal data is sent to Carvex or Firebase as part of the attestation.</p>
+
+    <h2>Push Notifications (Premium Users Only)</h2>
+    <p>If you enable Background Alerts in Settings, Carvex uses iOS's <strong>local notification</strong> system to alert you when a favorited car drops in price or when new listings match one of your saved searches. These notifications are generated <strong>on your device</strong>. No push notification tokens are sent to Carvex or any remote server — Carvex does not use Firebase Cloud Messaging, Apple Push Notification Service, or any other remote push infrastructure.</p>
+
+    <p>Background Alerts rely on iOS's <strong>Background App Refresh</strong> framework to wake the app periodically. When woken, the app downloads the latest premium listings file (subject to the Firebase logging described above) and compares it to a locally-stored snapshot on your device. If a qualifying price drop or saved-search match is detected, a local notification is posted.</p>
+
+    <p>You can disable Background Alerts at any time in Carvex Settings → Notifications → Background Alerts, or globally in iOS Settings → Carvex → Background App Refresh / Notifications.</p>
 
     <h2>Advertising</h2>
     <p>Carvex displays ads provided by <strong>Google AdMob</strong>. AdMob may collect and use certain data to serve personalized or non-personalized ads, including:</p>
@@ -41,14 +84,41 @@
     </ul>
     <p>This data is collected and processed by Google, not by Carvex. For more information, see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543">how Google uses data from apps</a>.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>Carvex fetches car listing data from publicly accessible marketplace websites (QatarSale, OpenSooq, q8car). These requests are made directly from your device. No user data is sent to these services.</p>
+    <h2>Third-Party Services Summary</h2>
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>Used For</th>
+            <th>Data Controller</th>
+        </tr>
+        <tr>
+            <td>Google AdMob</td>
+            <td>Advertising</td>
+            <td>Google</td>
+        </tr>
+        <tr>
+            <td>Firebase Storage</td>
+            <td>Premium listings file delivery</td>
+            <td>Google (Firebase)</td>
+        </tr>
+        <tr>
+            <td>Firebase App Check</td>
+            <td>Device authenticity verification</td>
+            <td>Google (Firebase) + Apple (App Attest)</td>
+        </tr>
+        <tr>
+            <td>Apple In-App Purchase</td>
+            <td>Subscription processing</td>
+            <td>Apple</td>
+        </tr>
+    </table>
+    <p>Carvex itself does not operate its own servers that store user data. The Firebase backend is used only to publish the daily premium listings file.</p>
 
     <h2>Children's Privacy</h2>
     <p>Carvex is not directed at children under 13. We do not knowingly collect any information from children.</p>
 
     <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated effective date.</p>
+    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated effective date. Significant changes will also be noted in the app's release notes.</p>
 
     <h2>Contact</h2>
     <p>If you have questions about this privacy policy, contact us at:<br>
