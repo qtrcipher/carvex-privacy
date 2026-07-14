@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carvex - Privacy Policy</title>
+    <title>Carvex — Privacy Policy | سياسة الخصوصية</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
         h1 { font-size: 24px; }
@@ -11,14 +11,19 @@
         p, li { font-size: 15px; }
         a { color: #007AFF; }
         table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: start; vertical-align: top; }
         th { background-color: #f5f5f5; }
+        .lang-nav { font-size: 15px; margin-bottom: 24px; }
+        hr.lang-divider { margin: 48px 0; border: none; border-top: 1px solid #ddd; }
     </style>
 </head>
 <body>
+    <nav class="lang-nav"><a href="#en">English</a> &nbsp;·&nbsp; <a href="#ar">العربية</a></nav>
+
+    <section id="en">
     <h1>Privacy Policy</h1>
     <p><strong>Carvex</strong> — GCC Car Marketplace</p>
-    <p><em>Effective date: April 8, 2026</em></p>
+    <p><em>Effective date: July 14, 2026</em></p>
 
     <h2>Overview</h2>
     <p>Carvex is an iOS app that aggregates car listings from public marketplaces across the GCC region. This policy explains what information the app handles and — just as importantly — what it does not handle.</p>
@@ -42,8 +47,6 @@
     <ul>
         <li>QatarSale (Qatar)</li>
         <li>OpenSooq (all 6 GCC countries)</li>
-        <li>Q8Car (Kuwait)</li>
-        <li>4Sale (Kuwait)</li>
     </ul>
 
     <p><strong>Premium-tier sources</strong> (fetched via our Firebase backend):</p>
@@ -67,8 +70,8 @@
 
     <p><strong>Firebase App Check:</strong> Requests for the premium listings file are protected by Firebase App Check using Apple's App Attest service. App Attest is an Apple framework that lets your device prove it is running an authentic, unmodified copy of Carvex. This verification happens inside Apple's Secure Enclave on your device; no personal data is sent to Carvex or Firebase as part of the attestation.</p>
 
-    <h2>Push Notifications (Premium Users Only)</h2>
-    <p>If you enable Background Alerts in Settings, Carvex uses iOS's <strong>local notification</strong> system to alert you when a favorited car drops in price or when new listings match one of your saved searches. These notifications are generated <strong>on your device</strong>. No push notification tokens are sent to Carvex or any remote server — Carvex does not use Firebase Cloud Messaging, Apple Push Notification Service, or any other remote push infrastructure.</p>
+    <h2>Notifications (Premium Users Only)</h2>
+    <p>If you enable Background Alerts in Settings, Carvex uses iOS's <strong>local notification</strong> system to alert you when a favorited car drops in price or when new listings match one of your saved searches. These notifications are generated <strong>on your device</strong>. No push notification token is created for your device or sent to Carvex or any remote server.</p>
 
     <p>Background Alerts rely on iOS's <strong>Background App Refresh</strong> framework to wake the app periodically. When woken, the app downloads the latest premium listings file (subject to the Firebase logging described above) and compares it to a locally-stored snapshot on your device. If a qualifying price drop or saved-search match is detected, a local notification is posted.</p>
 
@@ -83,6 +86,8 @@
         <li>App usage data (ad interactions)</li>
     </ul>
     <p>This data is collected and processed by Google, not by Carvex. For more information, see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543">how Google uses data from apps</a>.</p>
+
+    <p><strong>App Tracking Transparency:</strong> Before any tracking for advertising purposes occurs, iOS asks for your permission via the App Tracking Transparency prompt. If you decline, ads are still shown but are not personalized using cross-app tracking. You can change your choice at any time in iOS Settings → Privacy &amp; Security → Tracking.</p>
 
     <h2>Third-Party Services Summary</h2>
     <table>
@@ -122,7 +127,120 @@
 
     <h2>Contact</h2>
     <p>If you have questions about this privacy policy, contact us at:<br>
-    <a href="mailto:dev.hamam@gmail.com">dev.hamam@gmail.com</a></p>
+    <a href="mailto:hamam@gccapps.com">hamam@gccapps.com</a></p>
+    </section>
+
+    <hr class="lang-divider">
+
+    <section id="ar" dir="rtl" lang="ar">
+    <h1>سياسة الخصوصية</h1>
+    <p><strong>كارفكس (Carvex)</strong> — سوق السيارات الخليجي</p>
+    <p><em>تاريخ السريان: 14 يوليو 2026</em></p>
+
+    <h2>نظرة عامة</h2>
+    <p>كارفكس تطبيق iOS يجمع إعلانات السيارات من الأسواق المتاحة للعامة في دول مجلس التعاون الخليجي. توضح هذه السياسة البيانات التي يتعامل معها التطبيق — والأهم من ذلك، البيانات التي لا يتعامل معها.</p>
+
+    <h2>المعلومات التي لا نجمعها</h2>
+    <p>لا يقوم كارفكس بما يلي:</p>
+    <ul>
+        <li>طلب إنشاء حساب أو تسجيل</li>
+        <li>جمع معرّفات شخصية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف</li>
+        <li>تتبع موقعك الجغرافي</li>
+        <li>الوصول إلى جهات الاتصال أو الكاميرا أو الميكروفون أو الصور</li>
+        <li>استخدام أدوات تحليلات أو تتبع سلوكي من جهات خارجية</li>
+        <li>الاحتفاظ بأي قاعدة بيانات للمستخدمين على خوادمنا</li>
+    </ul>
+    <p>تُخزَّن المفضلة وعمليات البحث المحفوظة والملاحظات وسجل المشاهدات الأخيرة وبيانات الاشتراك المؤقتة <strong>على جهازك فقط</strong> باستخدام التخزين المحلي المعياري في iOS. وعند حذف التطبيق تُحذف هذه البيانات.</p>
+
+    <h2>البيانات المجلوبة من مصادر عامة</h2>
+    <p>يعرض كارفكس إعلانات سيارات من مواقع أسواق متاحة للعامة. تُرسل الطلبات مباشرة من جهازك (للمصادر المجانية) أو عبر خادم كارفكس (لمصادر الاشتراك المميز، انظر أدناه). لا تُرسل أي بيانات مستخدم إلى هذه الأسواق — جهازك يقوم فقط بتنزيل بياناتها العامة.</p>
+
+    <p><strong>المصادر المجانية</strong> (تُجلب مباشرة من جهازك):</p>
+    <ul>
+        <li>QatarSale (قطر)</li>
+        <li>OpenSooq (دول الخليج الست)</li>
+    </ul>
+
+    <p><strong>مصادر الاشتراك المميز</strong> (تُجلب عبر خادم Firebase الخاص بنا):</p>
+    <ul>
+        <li>Dubizzle (الإمارات)</li>
+        <li>DubiCars (الإمارات)</li>
+    </ul>
+
+    <p>بالنسبة لمصادر الاشتراك المميز، يشغّل كارفكس نظام معالجة على الخادم يجلب بيانات الإعلانات العامة مرة واحدة يوميًا، ويوحّد تنسيقها، وينشرها في ملف JSON واحد على Firebase Storage. ينزّل جهازك هذا الملف عندما تكون مشتركًا في كارفكس المميز. لا يتلقى الخادم أي معلومات عنك — فهو ينشر البيانات فقط.</p>
+
+    <h2>اشتراكات كارفكس المميز (Carvex Premium)</h2>
+    <p>كارفكس المميز اشتراك متجدد تلقائيًا متاح بخطتين:</p>
+    <ul>
+        <li><strong>الاشتراك الشهري</strong> — 1.99 دولار أمريكي شهريًا</li>
+        <li><strong>الاشتراك السنوي</strong> — 9.99 دولار أمريكي سنويًا</li>
+    </ul>
+    <p>تُعالج المدفوعات عبر <strong>نظام الشراء داخل التطبيق من Apple</strong>. لا يتلقى كارفكس ولا يخزّن بيانات الدفع الخاصة بك أو حساب Apple ID أو أي معلومات فوترة. يجري التحقق من إيصالات الاشتراك محليًا على جهازك عبر StoreKit 2 من Apple — ولا تُرسل بيانات الإيصالات إلى كارفكس أو أي جهة خارجية. يمكنك إلغاء الاشتراك أو إدارته في أي وقت من إعدادات iOS ← Apple ID ← الاشتراكات.</p>
+
+    <h2>Firebase (للمشتركين فقط)</h2>
+    <p>عند اشتراكك في كارفكس المميز، ينزّل جهازك ملف الإعلانات اليومي من <strong>Firebase Storage</strong>، وهي خدمة من Google. تسجّل Firebase عنوان IP لكل طلب تنزيل ووقته التقريبي (تسجيل الخوادم القياسي). لا يربط كارفكس هذه السجلات بأي هوية مستخدم لأن كارفكس لا يحتفظ بهويات مستخدمين أصلًا.</p>
+
+    <p><strong>التحقق عبر Firebase App Check:</strong> طلبات تنزيل ملف الإعلانات المميز محمية بخدمة Firebase App Check باستخدام تقنية App Attest من Apple، وهي إطار عمل يتيح لجهازك إثبات أنه يشغّل نسخة أصلية وغير معدّلة من كارفكس. يجري هذا التحقق داخل المنطقة الآمنة (Secure Enclave) في جهازك، ولا تُرسل أي بيانات شخصية إلى كارفكس أو Firebase ضمن عملية التحقق.</p>
+
+    <h2>الإشعارات (للمشتركين فقط)</h2>
+    <p>عند تفعيل «التنبيهات في الخلفية» من الإعدادات، يستخدم كارفكس نظام <strong>الإشعارات المحلية</strong> في iOS لتنبيهك عند انخفاض سعر سيارة في مفضلتك أو ظهور إعلانات جديدة تطابق إحدى عمليات البحث المحفوظة. تُنشأ هذه الإشعارات <strong>على جهازك</strong>، ولا يُنشأ لجهازك أي رمز إشعارات (Push Token) ولا يُرسل إلى كارفكس أو أي خادم بعيد.</p>
+
+    <p>تعتمد التنبيهات في الخلفية على خاصية <strong>تحديث التطبيق في الخلفية</strong> في iOS لإيقاظ التطبيق دوريًا. عند الإيقاظ، ينزّل التطبيق أحدث ملف إعلانات (وفق سجلات Firebase الموضحة أعلاه) ويقارنه بنسخة محفوظة محليًا على جهازك، وإذا وُجد انخفاض سعر مؤهل أو تطابق جديد يُعرض إشعار محلي.</p>
+
+    <p>يمكنك تعطيل التنبيهات في أي وقت من إعدادات كارفكس ← الإشعارات ← التنبيهات في الخلفية، أو من إعدادات iOS ← كارفكس ← تحديث التطبيق في الخلفية / الإشعارات.</p>
+
+    <h2>الإعلانات</h2>
+    <p>يعرض كارفكس إعلانات مقدمة من <strong>Google AdMob</strong>. قد تجمع AdMob بعض البيانات وتستخدمها لعرض إعلانات مخصصة أو غير مخصصة، ومنها:</p>
+    <ul>
+        <li>معرّفات الجهاز (المعرّف الإعلاني)</li>
+        <li>عنوان IP</li>
+        <li>الموقع العام (على مستوى الدولة/المنطقة)</li>
+        <li>بيانات استخدام التطبيق (التفاعل مع الإعلانات)</li>
+    </ul>
+    <p>تُجمع هذه البيانات وتُعالج من قِبل Google وليس كارفكس. لمزيد من المعلومات، راجع <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a> و<a href="https://support.google.com/admob/answer/6128543">كيفية استخدام Google للبيانات من التطبيقات</a>.</p>
+
+    <p><strong>شفافية تتبع التطبيقات (App Tracking Transparency):</strong> قبل أي تتبع لأغراض إعلانية، يطلب iOS إذنك عبر مطالبة «شفافية تتبع التطبيقات». إذا رفضت، تستمر الإعلانات بالظهور لكن دون تخصيص قائم على التتبع عبر التطبيقات. يمكنك تغيير اختيارك في أي وقت من إعدادات iOS ← الخصوصية والأمان ← التتبع.</p>
+
+    <h2>ملخص خدمات الجهات الخارجية</h2>
+    <table>
+        <tr>
+            <th>الخدمة</th>
+            <th>الغرض</th>
+            <th>المتحكم بالبيانات</th>
+        </tr>
+        <tr>
+            <td>Google AdMob</td>
+            <td>الإعلانات</td>
+            <td>Google</td>
+        </tr>
+        <tr>
+            <td>Firebase Storage</td>
+            <td>توصيل ملف الإعلانات المميز</td>
+            <td>Google (Firebase)</td>
+        </tr>
+        <tr>
+            <td>Firebase App Check</td>
+            <td>التحقق من أصالة الجهاز</td>
+            <td>Google (Firebase) + Apple (App Attest)</td>
+        </tr>
+        <tr>
+            <td>الشراء داخل التطبيق من Apple</td>
+            <td>معالجة الاشتراكات</td>
+            <td>Apple</td>
+        </tr>
+    </table>
+    <p>لا يشغّل كارفكس خوادم تخزّن بيانات مستخدمين؛ يُستخدم خادم Firebase فقط لنشر ملف الإعلانات اليومي.</p>
+
+    <h2>خصوصية الأطفال</h2>
+    <p>كارفكس غير موجّه للأطفال دون سن 13 عامًا، ولا نجمع عن قصد أي معلومات من الأطفال.</p>
+
+    <h2>التغييرات على هذه السياسة</h2>
+    <p>قد نحدّث سياسة الخصوصية هذه من وقت لآخر، وستظهر أي تغييرات في هذه الصفحة مع تاريخ سريان محدّث. كما ستُذكر التغييرات الجوهرية في ملاحظات إصدارات التطبيق.</p>
+
+    <h2>التواصل</h2>
+    <p>إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، تواصل معنا عبر:<br>
+    <a href="mailto:hamam@gccapps.com">hamam@gccapps.com</a></p>
+    </section>
 
     <p style="margin-top: 40px; font-size: 13px; color: #999;">Hamam A. Alabdulla</p>
 </body>
